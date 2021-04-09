@@ -3,21 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #434343;
   font-family: 'Lato', sans-serif;
   color: #fff;
 }
-
 .container {
   min-height: 100vh;
 }
 
-/* mix */
-.text-uppercase {
-  text-transform: uppercase;
-}
 
 header {
   display: flex;
