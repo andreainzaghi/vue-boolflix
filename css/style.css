@@ -90,7 +90,7 @@ main {
   border: 1px solid #fff;
   margin: 20px 20px 0 0px;
   cursor: pointer;
-  perspective: 1000px;
+  /* perspective: 1000px; */
 }
 
 .m-image {
@@ -110,7 +110,7 @@ main {
   display: block;
   position: relative;
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 1s;
 
   background-color:#1C1C1C;
 }
@@ -125,7 +125,13 @@ main {
 .movie:hover .movie {
   overflow-y: auto;
 }
+.m-select{
+  display: flex;
+  height :200px;
+  width:100%;
+  overflow: scroll;
 
+}
 .m-info strong {
   font-size: 16px;
 }

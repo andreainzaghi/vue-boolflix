@@ -3,7 +3,9 @@ var app = new Vue({
   el: '#app',
   data: {
     userQuery: "",
-    movies: []
+    movies: [],
+    languages : ["it-IT","en-US"],
+  
 
   },
   methods: {
@@ -14,7 +16,9 @@ var app = new Vue({
           query: this.userQuery,
           page: 1,
           include_adult: false,
-          language: "it-IT",
+          selectlangindex:0,
+          language: this.languages[this.selectlangindex]
+
         }
       })
       .then((response)=>{
