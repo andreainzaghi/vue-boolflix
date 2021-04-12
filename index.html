@@ -40,8 +40,28 @@
                 <span v-else-if="movie.original_language === 'it'"> 🎌 </span>
                 <span v-else-if="movie.original_language === 'en'">🏁</span>
                 <span v-else="movie.original_language === 'jp'"> 🏴 </span>
-
-
+              </p>
+              <div class="m-rate">
+                <strong>Voto:</strong>
+                <span v-for="i in movie.vote_average"><i class="fas fa-star rate-star"></i></span>
+                <span v-for="i in (5 - movie.vote_average)"><i class="far fa-star rate-star"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="m-selects">
+          <div class="movie" v-for="(movie, i) in movies" v-if="movie.poster_path != null">
+            <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original' + movie.poster_path" alt="">
+            <div class="m-info">
+              <p class="m-title"><strong>Titolo:</strong> <span>{{movie.title}}</span></p>
+              <p class="titolo-h"><strong>Titolo originale:</strong> <span>{{movie.original_title}}</span></p>
+              <p class="lingua-h" v-show="movie.original_language != ''"><strong>Original Language:</strong>
+                <span v-if="movie.original_language === 'cn'">🏳</span>
+                <span v-else-if="movie.original_language === 'en'">🚩</span>
+                <span v-else-if="movie.original_language === 'it'"> 🎌 </span>
+                <span v-else-if="movie.original_language === 'en'">🏁</span>
+                <span v-else="movie.original_language === 'jp'"> 🏴 </span>
               </p>
               <div class="m-rate">
                 <strong>Voto:</strong>

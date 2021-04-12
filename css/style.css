@@ -74,19 +74,22 @@ header .logo {
 
 main {
   padding-top: 80px;
+
+
 }
 
 .m-selects {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 20px;
+  display:flex;
+  padding: 10px;
+  overflow: hidden;
+
+  width: 400%;
+  height: 350px;
 }
 
 .movie {
   width: 250px;
-  height: 400px;
+  height: 350px;
   border: 1px solid #fff;
   margin: 20px 20px 0 0px;
   cursor: pointer;
@@ -142,5 +145,24 @@ main {
 }
 
 .rate-star {
-  margin: 0 1px;
+  margin: 0 ;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
 }
