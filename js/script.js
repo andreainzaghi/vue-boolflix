@@ -25,7 +25,9 @@ var app = new Vue({
     },
     movieRate: function() {
       this.movies.forEach((item) => {
-        item.vote_average = Math.ceil(item.vote_average / 2);
+
+        var vote = Math.ceil(item.vote_average / 2);
+        item.vote_average = vote;
         console.log(item.vote_average);
       });
     }
