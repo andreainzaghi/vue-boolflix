@@ -77,6 +77,14 @@ main {
 
 
 }
+.m-selects2 {
+  display:flex;
+  padding: 10px;
+  overflow: hidden;
+
+  width: 400%;
+  height: 350px;
+}
 
 .m-selects {
   display:flex;
@@ -128,13 +136,8 @@ main {
 .movie:hover .movie {
   overflow-y: auto;
 }
-.m-select{
-  display: flex;
-  height :200px;
-  width:100%;
-  overflow: scroll;
 
-}
+
 .m-info strong {
   font-size: 16px;
 }
