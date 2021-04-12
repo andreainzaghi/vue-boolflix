@@ -38,7 +38,7 @@
               <div class="m-rate">
                 <strong>Voto:</strong>
                 <span v-for="i in movie.vote_average"><i class="fas fa-star rate-star"></i></span>
-                <span v-for="i in movie.vote_average"><i class="far fa-star rate-star"></i></span>
+                <span v-for="i in (5 - movie.vote_average)"><i class="far fa-star rate-star"></i></span>
               </div>
             </div>
           </div>

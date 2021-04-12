@@ -18,16 +18,15 @@ var app = new Vue({
         }
       })
       .then((response)=>{
-        const searchResults = response.data.results;
-        this.movies = searchResults;
+        this.movies =   response.data.results;
         this.movieRate();
       });
       this.userQuery="";
     },
     movieRate: function() {
       this.movies.forEach((item) => {
-        const voteRound = (item.vote_average / 2);
-        let vote = Math.ceil(voteRound);
+        const votestar = (item.vote_average / 2);
+        var vote = Math.ceil(votestar);
         item.vote_average = vote;
         console.log(item.vote_average);
       });
