@@ -42,7 +42,13 @@ header {
   left: 0;
   z-index: 11;
 }
+.input-text{
+  display:none;
+}
+.input-text2{
 
+  display: visible;
+}
 .h-logo,
 .h-search {
   width: 50%;
@@ -52,7 +58,11 @@ header .logo {
   width: 150px;
   border: 0;
 }
+.section-h{
+  height: 100vh;
+  width:100%;
 
+}
 .h-search {
   text-align: right;
 }
@@ -77,20 +87,11 @@ main {
 
 
 }
-.m-selects2 {
-  display:flex;
-  padding: 10px;
-  overflow: hidden;
-
-  width: 400%;
-  height: 350px;
-}
 
 .m-selects {
   display:flex;
   padding: 10px;
   overflow: hidden;
-
   width: 400%;
   height: 350px;
 }
@@ -98,7 +99,7 @@ main {
 .movie {
   width: 250px;
   height: 350px;
-  border: 1px solid #fff;
+
   margin: 20px 20px 0 0px;
   cursor: pointer;
   /* perspective: 1000px; */
