@@ -69,7 +69,7 @@ header {
 .overlay-black{
   position: absolute;
   z-index: 5;
-  top:180px;
+  top:0px;
   bottom:-80px;
   left:0;
   right:0;
