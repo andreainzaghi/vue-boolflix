@@ -4,8 +4,11 @@ var app = new Vue({
   data: {
     userQuery: "",
     movies: [],
+    series: [],
+    selectlangindex:0,
     languages : ["it-IT","en-US"],
     textInput:"input-text",
+
 
 
   },
@@ -18,7 +21,7 @@ var app = new Vue({
           query: this.userQuery,
           page: 1,
           include_adult: false,
-          selectlangindex:0,
+
           language: this.languages[this.selectlangindex]
         }
       })
@@ -28,18 +31,18 @@ var app = new Vue({
       });
 
       this.userQuery="";
-      axios.get('https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=scrubs', {
-        params: {
-
+      axios.get('https://api.themoviedb.org/3/search/tv',{
+         params: {
+          api_key: "49659ac56a41879716b29b1fe3c048a3",
           query: this.userQuery,
           page: 1,
           include_adult: false,
-          selectlangindex:0,
+
           language: this.languages[this.selectlangindex]
-        }
-      })
+        }})
       .then((response)=>{
-        this.movies =   response.data.results;
+        this.series =   response.data.results;
+        console.log(this.series);
         this.movieRate();
       });
 
