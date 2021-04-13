@@ -29,16 +29,30 @@
 
 
       <main>
-        <!-- <section classe="section-h">
-          <div class="movie" v-for="(movie, i) in movies" v-if="movie.poster_path != null">
-            <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original' + movie.poster_path[0]" alt="">
+        <section classe="section-h">
+          <div class=""  v-if="movies.length > 0">
+            <div class="overlay-black">
+
+            </div>
+            <img class="dimension" :src=" 'https://image.tmdb.org/t/p/original/' + movies[0].poster_path" alt="">
+            <div class="dettagli-film-copertina">
+              <span>{{movies[0].title}}</span>
+              <!-- <span v-for="i in movies[0].vote_average"><i class="fas fa-star rate-star"></i></span>
+              <span v-for="i in (5 - movies[0].vote_average)"><i class="far fa-star rate-star"></i></span> -->
+            <div class="bottoni-btn">
+              <button class="btn-color" type="button" name="button"><i class="fas fa-bell"></i></button>
+                <button class="btn-color" type="button" name="button"><i class="far fa-calendar-plus"></i></button>
+                  <button class="btn-color" type="button" name="button"><i class="far fa-check-circle"></i></button>
+            </div>
+            </div>
+
 
           </div>
 
-        </section> -->
-        <div class="m-selects">
+        </section>
+        <div  class="m-selects">
           <div class="movie" v-for="(movie, i) in movies" v-if="movie.poster_path != null">
-            <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original' + movie.poster_path" alt="">
+            <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original/' + movie.poster_path" alt="">
             <div class="m-info">
               <p class="m-title"><strong>Titolo:</strong> <span>{{movie.title}}</span></p>
               <p class="titolo-h"><strong>Titolo originale:</strong> <span>{{movie.original_title}}</span></p>
