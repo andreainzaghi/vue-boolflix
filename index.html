@@ -50,6 +50,7 @@
           </div>
 
         </section>
+        </main>
         <div  class="m-selects">
           <div class="movie" v-for="(movie, i) in movies" v-if="movie.poster_path != null">
             <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original/' + movie.poster_path" alt="">
@@ -72,7 +73,7 @@
           </div>
         </div>
 
-      </main>
+
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>

@@ -69,7 +69,7 @@ header {
 .overlay-black{
   position: absolute;
   z-index: 5;
-  top:0;
+  top:180px;
   bottom:-80px;
   left:0;
   right:0;
@@ -116,16 +116,20 @@ main {
 
 
 }
-
+.Film{
+  font-size: 30px;
+  color:#fff;
+  margin-left:30px;
+}
 
 .m-selects {
   max-height:351px;
   display:flex;
-  overflow-x:auto;
-  width:100%;
+overflow-x:scroll;
+
 }
  .movie{
-  width: 20%;
+min-width: 250px;
   height: 350px;
 
   margin: 20px 20px 0 0px;
@@ -167,7 +171,9 @@ main {
 .movie:hover .movie {
   overflow-y: auto;
 }
-
+.m-info{
+  margin-top:175px;
+}
 
 .m-info strong {
   font-size: 16px;
