@@ -2,12 +2,16 @@
 var app = new Vue({
   el: '#app',
   data: {
+
     userQuery: "",
     movies: [],
     series: [],
+  film1:'m-selects',
+    film2:'m-selects',
     selectlangindex:0,
     languages : ["it-IT","en-US"],
     textInput:"input-text",
+
 
 
 
@@ -22,7 +26,6 @@ var app = new Vue({
         query: this.userQuery,
         page: 1,
         include_adult: false,
-
         language: this.languages[this.selectlangindex]
       }
     })
@@ -38,16 +41,16 @@ var app = new Vue({
         query: this.userQuery,
         page: 1,
         include_adult: false,
-
         language: this.languages[this.selectlangindex]
       }})
-    .then((response)=>{
-      this.series =   response.data.results;
-      console.log(this.series);
+    .then((resultate)=>{
+      this.series = resultate.data.results;
+      // console.log(this.series);
       this.movieRate();
     });
-  }
 
+  }
+  // this.userQuery !=""
     },
     inputAnimation:function(event){
   if (this.textInput=='input-text') {
@@ -57,6 +60,23 @@ var app = new Vue({
   }
 
 },
+AllSf:function(){
+  this.film2 =='m-selects',
+  this.film1=='m-selects'
+
+},
+ FilmClick:function(){
+   if (this.film1 =='m-selects') {
+    this.film2=='display',
+    this.film1 =='m-selects'
+   }
+ },
+ SerieClick:function(){
+   if (this.film2 =='m-selects') {
+    this.film1=='display',
+    this.film2 =='m-selects'
+   }
+ },
 
     movieRate: function() {
       this.movies.forEach((item) => {

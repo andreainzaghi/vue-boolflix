@@ -18,7 +18,15 @@
       <header>
         <div class="h-logo">
           <img class="logo" src="https://fontmeme.com/permalink/210409/0a43aa36584f2895324a0006b42b5d1a.png" alt="">
+        <div class="selects-header">
+          <select class="select-f-t-a" name="">
+            <option @click="AllSf" value="">All</option>
+            <option @click="FilmClick" value="">Film</option>
+            <option @click="SerieClick" value="">Serie TV</option>
+          </select>
         </div>
+        </div>
+
         <div class="h-search">
           <label for="m1-input">
             <input type="text" id="movie-s1" v-model="userQuery" @keydown.13="moviesSearch"  :class="textInput" placeholder="Search here">
@@ -51,7 +59,7 @@
 
         </section>
         </main>
-        <div  class="m-selects">
+        <div  v-dragscroll.x  :class="film1">
           <div class="movie" v-for="(movie, i) in movies" v-if="movie.poster_path != null">
             <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original/' + movie.poster_path" alt="">
             <div class="m-info">
@@ -72,10 +80,29 @@
             </div>
           </div>
         </div>
+        <!-- serie tv -->
+        <div v-dragscroll.x   :class="film2">
+          <div class="movie" v-for="(serie, i) in series" v-if="serie.poster_path != null">
+            <img class="m-image" :src=" 'https://image.tmdb.org/t/p/original/' + serie.poster_path" alt="">
+            <div class="m-info">
+              <p class="m-title"><strong>Titolo:</strong> <span>{{serie.name}}</span></p>
+              <p class="titolo-h"><strong>Titolo originale:</strong> <span>{{serie.original_name}}</span></p>
+              <p class="lingua-h" v-show="serie.original_language != ''"><strong>Original Language:</strong>
+
+              </p>
+              <div class="m-rate">
+                <strong>Voto:</strong>
+                <span v-for="i in serie.vote_average"><i class="fas fa-star rate-star"></i></span>
+                <span v-for="i in (5 - serie.vote_average)"><i class="far fa-star rate-star"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
     </div>
-
+    <script src="https://unpkg.com/vue"></script>
+           <script src="https://unpkg.com/vue-dragscroll"></script>
     <script src="js/script.js" charset="utf-8"></script>
 
   </body>

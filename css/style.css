@@ -62,9 +62,18 @@ header {
 
   display: visible;
 }
+.h-logo{
+  display:flex;
+  align-items: center;
+
+}
+.selects-header{
+  margin-left:
+}
 .h-logo,
 .h-search {
   width: 50%;
+
 }
 .overlay-black{
   position: absolute;
@@ -121,21 +130,17 @@ main {
   color:#fff;
   margin-left:30px;
 }
+.display{
+  display: none;
+}
 
 .m-selects {
-  max-height:351px;
+  /* max-height:351px; */
   display:flex;
-overflow-x:scroll;
-
+overflow-x:auto;
 }
- .movie{
-min-width: 250px;
-  height: 350px;
 
-  margin: 20px 20px 0 0px;
-  cursor: pointer;
 
-}
 
 
 .m-image {
@@ -168,9 +173,7 @@ min-width: 250px;
   display: none;
 }
 
-.movie:hover .movie {
-  overflow-y: auto;
-}
+
 .m-info{
   margin-top:175px;
 }
@@ -182,6 +185,14 @@ min-width: 250px;
 .m-info p,
 .m-info .m-rate {
   margin-bottom: 10px;
+}
+.movie{
+min-width: 250px;
+ height: 350px;
+
+ margin: 20px 20px 0 0px;
+ cursor: pointer;
+
 }
 
 .rate-star {
